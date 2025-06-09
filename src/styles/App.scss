@@ -1,0 +1,30 @@
+@use './core/reset';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    background-color: rgb(25, 25, 25);
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    h1{letter-spacing: 0.5em;}
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+}
+    .filter {
+        // background-color: aqua;
+    }
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
