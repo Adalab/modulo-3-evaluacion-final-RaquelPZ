@@ -53,15 +53,17 @@ function App() {
         </div>
       </header>
       <main>
-        <ul>
           {magic.map((eachMagic) => (
-            <li key={eachMagic.id}>
-              <img src={eachMagic.image} alt="foto de la bruja" />
-              <h4>{eachMagic.name}</h4>
-              <p>{eachMagic.especies}</p>
-            </li>
+            <div className='card'>
+              <li key={eachMagic.id}>
+                <div className='photo'>
+                  <img src={eachMagic.image} alt="foto de la bruja" />
+                </div>
+                <h4>{eachMagic.name}</h4>
+                <p>{eachMagic.species}</p>
+              </li>
+            </div>
           ))}
-        </ul>
       </main>
     </div>
   );
