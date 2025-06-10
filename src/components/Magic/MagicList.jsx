@@ -6,7 +6,7 @@ function MagicList({ filteredMagic }) {
     <>
       {filteredMagic.length === 0 ? (
         <div className='no_magic'>
-          <p>No creature found :(</p>
+          <p>No creature found D:</p>
           <img src={magicat} alt="imagen del magicat" />
         </div>
       ) : (

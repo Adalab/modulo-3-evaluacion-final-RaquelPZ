@@ -23,7 +23,7 @@ function App() {
       });
   }, []);
 
-  //EVENTS
+  //EVENTS+FUNCTION
   const handleFilterName = (ev) => {
     setFilters({
       ...filters,
@@ -42,7 +42,16 @@ function App() {
       ancestry: ev.target.value
     });
   };
+  const handleFilterReset = (ev) => {
+    setFilters({
+      ...filters,
+      name: "",
+      house: "",
+      ancestry: ""
+    });
+  }
 
+  //FILTERS
   const filteredMagic = magic
     .filter((eachMagic) =>
       eachMagic.name.toLocaleLowerCase()
@@ -57,9 +66,7 @@ function App() {
         .includes(filters.ancestry)
     );
 
-  //FUNCTIONS
-
-
+  //HTML
   return (
     <div className='page'>
       <header>
@@ -73,7 +80,16 @@ function App() {
           handleFilterName={handleFilterName}
           handleFilterHouse={handleFilterHouse}
           handleFilterBlood={handleFilterBlood}
+          handleFilterReset={handleFilterReset}
         />
+        <button 
+          className='infoNO'
+          name='filterReset'
+          id='filterReset'
+          type='button'
+          onClick={handleFilterReset}
+        >⭮
+        </button>
       </header>
       <main>
         <MagicList filteredMagic={filteredMagic} />

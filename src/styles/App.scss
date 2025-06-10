@@ -37,8 +37,6 @@ header{
         .info{
             background-color: rgb(73, 73, 73);
             height: 32px;
-            border-color: goldenrod;
-            border-width: 1px;
                 color: goldenrod;
                 text-align: center;
                 text-transform: uppercase;
@@ -60,6 +58,20 @@ header{
                 width: 105px;
                 padding-right: 15px;
                 border-bottom-right-radius: 50px;
+            }
+            .infoNO{
+                background-color: goldenrod;
+                color:rgb(55, 55, 55);
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                margin-inline: 1%;
+                margin-block: 250px;
+                border-radius: 50px;
+                    font-weight: bolder;
+                    font-size: 20px;
             }
                 
 
@@ -89,23 +101,34 @@ main {
 
 //CONDICONALS
 .house_red {
-  background-color: #500f0f;
+    background-color: #500f0f;
 }
+
 .house_green {
-  background-color: #104416;
+    background-color: #104416;
 }
+
 .house_blue {
-  background-color: #101341;
+    background-color: #101341;
 }
+
 .house_yellow {
-  background-color: #484407;
+    background-color: #78710c;
 }
 
 //PHONE
 @media (max-width: 500px) {
-  header{
-    padding: 2%;
-    img{width: 250px;}
+
+    header {
+        img {
+            width: 250px;
+        }
     }
+
+    .infoNO {
+        top: auto;
+        bottom: 0;
+        margin: 3%;
+    }
+
 }
-     
