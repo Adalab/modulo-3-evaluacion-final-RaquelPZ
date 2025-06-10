@@ -48,17 +48,17 @@ header{
                 font-weight: bold;
         }
             .infoT{
-                width: 210px;
+                width: 220px;
                 border-top-left-radius: 50px;
                 border-top-right-radius: 50px;
             }
             .infoBL{
-                width: 105px;
+                width: 110px;
                 padding-left: 20px;
                 border-bottom-left-radius: 50px;
             }
             .infoBR{
-                width: 105px;
+                width: 110px;
                 padding-right: 15px;
                 border-bottom-right-radius: 50px;
             }
@@ -121,10 +121,10 @@ main {
 
 //DETAIL
 .detail{
-    background-color: rgb(73, 73, 73);
     padding: 20px;
     width: 90%;
     max-width: 600px;
+    margin-top: 20px;
     display: grid; 
     text-align: left;
     border-bottom-left-radius: 3px;
@@ -132,11 +132,12 @@ main {
     h2 {margin-left: 20px;}
     ul {margin-left: 50px;}
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20% 40% 40%;
+    grid-template-rows: 18% 39% 38% 5%;
     grid-template-areas: 
     "photo name"
     "photo list"
-    "photo more";
+    "photo more"
+    "back back";
 }
     .detail_photo{
         grid-area: photo;
@@ -150,6 +151,9 @@ main {
     }
     .detail_more{
         grid-area: more;
+    }
+    .detail_back{
+        grid-area: back;
     }
 //PHONE
 @media (max-width: 500px) {
@@ -169,15 +173,15 @@ main {
     .detail{
         width: 75%;
         padding: 5px;
-        margin-top: 20px;
         text-align: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 7.5% 52.5% 20% 20%;
+        grid-template-rows: 7% 50% 20% 20% 3% ;
         grid-template-areas: 
         "name"
         "photo"
         "list"
-        "more";
+        "more"
+        "back";
         img{width: 90%; height: 90%;}
 }
 

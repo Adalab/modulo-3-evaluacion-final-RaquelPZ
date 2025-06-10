@@ -9,15 +9,22 @@ function MagicDetail({ magic }) {
     const magicInfo = magic.find((eachMagic) =>
         eachMagic.id === params.magid);
 
+    const houseClass = {
+        Gryffindor: 'house_red',
+        Slytherin: 'house_green',
+        Ravenclaw: 'house_blue',
+        Hufflepuff: 'house_yellow'
+    };
+
     return (
         <>
             {magicInfo ? (
-                <div className='detail'>
-                    <div className='detail_photo'>
-                        <img
-                            src={magicInfo.image || Ivanico}
-                            alt='foto de la bruja' />
-                    </div>
+                <>
+                <div className={`detail ${houseClass[magicInfo.house] || ''}`}>                    <div className='detail_photo'>
+                    <img
+                        src={magicInfo.image || Ivanico}
+                        alt='foto de la bruja' />
+                </div>
                     <h2 className='.detail_name'>
                         {magicInfo.name ? magicInfo.name : "NO name"}
                     </h2>
@@ -32,8 +39,10 @@ function MagicDetail({ magic }) {
                         <li><strong>Status: </strong>{magicInfo.status ? magicInfo.ancestry : "A stranger"}</li>
                         <li><strong>Patronus: </strong>{magicInfo.patronus ? magicInfo.patronus : "A stranger"}</li>
                     </ul>
+                    <div className='detail_back'><a href=''>🡸</a></div>
                 </div>
-
+                
+                </>
             ) :
                 (
                     <div className='no_magic'>
