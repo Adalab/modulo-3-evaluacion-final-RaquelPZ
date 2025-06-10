@@ -82,7 +82,26 @@ main {
     .photo{
         img{width: 100%; height: 200px; object-fit: cover;}  
     }
+        .no_magic {
+            padding: 10%;
+            img{width: 60%; margin:7.5%;}
+        }
 
+//CONDICONALS
+.house_red {
+  background-color: #500f0f;
+}
+.house_green {
+  background-color: #104416;
+}
+.house_blue {
+  background-color: #101341;
+}
+.house_yellow {
+  background-color: #484407;
+}
+
+//PHONE
 @media (max-width: 500px) {
   header{
     padding: 2%;

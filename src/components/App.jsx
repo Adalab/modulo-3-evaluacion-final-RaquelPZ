@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../styles/App.scss';
 import MagicList from './Magic/MagicList';
 import MagicFilters from './Magic/MagicFilters';
+import LogoHP from '../images/HP_logo.png';
 
 function App() {
 
@@ -63,8 +64,8 @@ function App() {
     <div className='page'>
       <header>
         <img
-          src={"/HP_logo.png"}
-          alt='foto de la bruja'
+          src={LogoHP}
+          alt='logo de Harry Potter'
         />
         <MagicFilters
           magic={magic}
