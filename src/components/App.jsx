@@ -3,6 +3,9 @@ import '../styles/App.scss';
 import MagicList from './Magic/MagicList';
 import MagicFilters from './Magic/MagicFilters';
 import LogoHP from '../images/HP_logo.png';
+import { Routes, Route } from 'react-router';
+import MagicDetail from './MagicDetail/MagicDetail';
+import magicat from '../images/no_magicat.webp';
 
 function App() {
 
@@ -82,17 +85,19 @@ function App() {
           handleFilterBlood={handleFilterBlood}
           handleFilterReset={handleFilterReset}
         />
-        <button 
-          className='infoNO'
-          name='filterReset'
-          id='filterReset'
-          type='button'
-          onClick={handleFilterReset}
-        >⭮
-        </button>
+
       </header>
       <main>
-        <MagicList filteredMagic={filteredMagic} />
+        <Routes>
+          <Route
+            path="/"
+            element={<MagicList filteredMagic={filteredMagic} />}
+          />
+          <Route
+            path="/detail/:magid"
+            element={<MagicDetail magic={filteredMagic} />}
+          />
+        </Routes>
       </main>
     </div>
   );

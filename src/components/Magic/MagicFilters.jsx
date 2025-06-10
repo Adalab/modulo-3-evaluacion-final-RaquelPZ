@@ -1,4 +1,4 @@
-function MagicFilters({ filters, handleFilterName, handleFilterHouse, handleFilterBlood }) {
+function MagicFilters({ filters, handleFilterName, handleFilterHouse, handleFilterBlood, handleFilterReset }) {
 
     return (
         <div className='filter'>
@@ -43,6 +43,14 @@ function MagicFilters({ filters, handleFilterName, handleFilterHouse, handleFilt
                     </select>
                 </div>
             </form>
+            <button
+                className='infoNO'
+                name='filterReset'
+                id='filterReset'
+                type='button'
+                onClick={handleFilterReset}
+            >⭮
+            </button>
 
         </div>
     )

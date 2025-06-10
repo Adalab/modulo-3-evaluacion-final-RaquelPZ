@@ -1,0 +1,50 @@
+import { useParams } from 'react-router';
+import magicat from '../../images/no_magicat.webp';
+import Ivanico from '../../images/ivanico.png';
+
+
+function MagicDetail({ magic }) {
+
+    const params = useParams();
+    const magicInfo = magic.find((eachMagic) =>
+        eachMagic.id === params.magid);
+
+    return (
+        <>
+            {magicInfo ? (
+                <div className='detail'>
+                    <div className='detail_photo'>
+                        <img
+                            src={magicInfo.image || Ivanico}
+                            alt='foto de la bruja' />
+                    </div>
+                    <h2 className='.detail_name'>
+                        {magicInfo.name ? magicInfo.name : "NO name"}
+                    </h2>
+                    <ul className='.detail_list'>
+                        <li><strong>House: </strong>{magicInfo.house ? magicInfo.house : "NO house"}</li>
+                        <li><strong>Specie: </strong>{magicInfo.species ? magicInfo.species : "NO specie"}</li>
+                        <li><strong>Gender: </strong>{magicInfo.gender ? magicInfo.gender : "NO gender"}</li>
+                        <li><strong>Birth: </strong>{magicInfo.yearOfBirth ? magicInfo.yearOfBirth : "¿?"}</li>
+                    </ul>
+                    <ul className='.detail_more'>
+                        <li><strong>Blood: </strong>{magicInfo.ancestry ? magicInfo.ancestry : "A stranger"}</li>
+                        <li><strong>Status: </strong>{magicInfo.status ? magicInfo.ancestry : "A stranger"}</li>
+                        <li><strong>Patronus: </strong>{magicInfo.patronus ? magicInfo.patronus : "A stranger"}</li>
+                    </ul>
+                </div>
+
+            ) :
+                (
+                    <div className='no_magic'>
+                        <p>No creature found D:</p >
+                        <img src={magicat} alt="imagen del magicat" />
+                    </div >
+                )
+            }
+
+        </>
+    );
+}
+
+export default MagicDetail;

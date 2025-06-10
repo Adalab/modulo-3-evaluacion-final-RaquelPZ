@@ -1,5 +1,6 @@
 import MagicItem from "./MagicItem";
 import magicat from '../../images/no_magicat.webp';
+import { Link } from 'react-router';
 
 function MagicList({ filteredMagic }) {
 
@@ -17,16 +18,16 @@ function MagicList({ filteredMagic }) {
           <p>No creature found D:</p>
           <img src={magicat} alt="imagen del magicat" />
         </div>
-      ) : (
-        filteredMagic.map((eachMagic) => (
-          <div
-            key={eachMagic.id}
-            className={`card ${houseClass[eachMagic.house] || ''}`}
-          >
-            <MagicItem magic={eachMagic} />
-          </div>
-        ))
-      )}
+      ) :
+        (
+          filteredMagic.map((eachMagic) => (
+            <Link to={"/detail/" + eachMagic.id} key={eachMagic.id}>
+              <div className={`card ${houseClass[eachMagic.house] || ''}`}>
+                <MagicItem magic={eachMagic} />
+              </div>
+            </Link>
+          ))
+        )}
     </>
   );
 }

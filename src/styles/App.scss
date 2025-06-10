@@ -8,7 +8,9 @@
     background-color: rgb(25, 25, 25);
     color: antiquewhite;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
     list-style-type: none;
+    text-decoration: none;
     letter-spacing: 0.4px;
 }
     select, input, option{
@@ -18,6 +20,7 @@
         background: none;
         border: none;     
         }
+    a{text-decoration: none; color: antiquewhite;}
 
 //HEADER
 header{
@@ -116,6 +119,38 @@ main {
     background-color: #4f4b08;
 }
 
+//DETAIL
+.detail{
+    background-color: rgb(73, 73, 73);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    display: grid; 
+    text-align: left;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    h2 {margin-left: 20px;}
+    ul {margin-left: 50px;}
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-areas: 
+    "photo name"
+    "photo list"
+    "photo more";
+}
+    .detail_photo{
+        grid-area: photo;
+        img{width: 100%; height: 300px; object-fit: cover; border-radius: 3px;}
+    }
+    .detail_name{
+        grid-area: name;
+    }
+    .detail_list{
+        grid-area: list;
+    }
+    .detail_more{
+        grid-area: more;
+    }
 //PHONE
 @media (max-width: 500px) {
 
@@ -130,5 +165,20 @@ main {
         bottom: 0;
         margin: 3%;
     }
+
+    .detail{
+        width: 75%;
+        padding: 5px;
+        margin-top: 20px;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 7.5% 52.5% 20% 20%;
+        grid-template-areas: 
+        "name"
+        "photo"
+        "list"
+        "more";
+        img{width: 90%; height: 90%;}
+}
 
 }
