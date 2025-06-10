@@ -8,13 +8,13 @@ function App() {
   //VAR ESTADO
   const [magic, setMagic] = useState([]);
   const [filters, setFilters] = useState({
-    name:'',
-    house:'',
-    ancestry:''
+    name: '',
+    house: '',
+    ancestry: ''
   });
 
   //DATA: USE-EFFECTS
-  useEffect( () => { 
+  useEffect(() => {
     fetch('https://hp-api.onrender.com/api/characters')
       .then(response => response.json())
       .then(data => {
@@ -46,34 +46,36 @@ function App() {
     .filter((eachMagic) =>
       eachMagic.name.toLocaleLowerCase()
         .includes(filters.name.toLocaleLowerCase())
-  )
+    )
     .filter((eachMagic) =>
       eachMagic.house
         .includes(filters.house)
-  )
+    )
     .filter((eachMagic) =>
       eachMagic.ancestry
         .includes(filters.ancestry)
-  );
-  
+    );
+
   //FUNCTIONS
 
 
   return (
     <div className='page'>
       <header>
-        <h1>HARRY POTTER</h1>
-          <MagicFilters 
-  magic={magic}
-  filters={filters}
-  handleFilterName={handleFilterName}
-  handleFilterHouse={handleFilterHouse}
-  handleFilterBlood={handleFilterBlood}
-/>
- 
+        <img
+          src={"/HP_logo.png"}
+          alt='foto de la bruja'
+        />
+        <MagicFilters
+          magic={magic}
+          filters={filters}
+          handleFilterName={handleFilterName}
+          handleFilterHouse={handleFilterHouse}
+          handleFilterBlood={handleFilterBlood}
+        />
       </header>
       <main>
-        <MagicList filteredMagic = {filteredMagic}/>
+        <MagicList filteredMagic={filteredMagic} />
       </main>
     </div>
   );
