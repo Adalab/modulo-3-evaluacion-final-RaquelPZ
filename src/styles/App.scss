@@ -9,7 +9,7 @@
     color: antiquewhite;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style-type: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
 }
     select, input, option{
         appearance: none;
@@ -88,32 +88,32 @@ main {
         width: 160px;
         margin: 20px;
         padding-bottom: 6px;
-        h4{font-size: 15px;}
-        p{font-size: 15px;}
+        h4{font-size: 15px; font-weight: 500;}
+        p{font-size: 14px; text-transform: capitalize;}
     }
     .photo{
         img{width: 100%; height: 200px; object-fit: cover;}  
     }
         .no_magic {
-            padding: 10%;
+            padding: 5%;
             img{width: 60%; margin:7.5%;}
         }
 
 //CONDICONALS
 .house_red {
-    background-color: #500f0f;
+    background-color: #481010;
 }
 
 .house_green {
-    background-color: #104416;
+    background-color: #0e3813;
 }
 
 .house_blue {
-    background-color: #101341;
+    background-color: #181a39;
 }
 
 .house_yellow {
-    background-color: #78710c;
+    background-color: #4f4b08;
 }
 
 //PHONE
