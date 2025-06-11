@@ -91,7 +91,10 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<MagicList filteredMagic={filteredMagic} />}
+            element={<MagicList
+              filteredMagic={filteredMagic}
+              filters={filters}
+              setFilters={setFilters} />}
           />
           <Route
             path="/detail/:magid"

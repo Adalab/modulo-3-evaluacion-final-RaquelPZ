@@ -1,4 +1,4 @@
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import magicat from '../../images/no_magicat.webp';
 import Ivanico from '../../images/ivanico.png';
 
@@ -39,7 +39,7 @@ function MagicDetail({ magic }) {
                         <li><strong>Status: </strong>{magicInfo.status ? magicInfo.ancestry : "A stranger"}</li>
                         <li><strong>Patronus: </strong>{magicInfo.patronus ? magicInfo.patronus : "A stranger"}</li>
                     </ul>
-                    <div className='detail_back'><a href=''>🡸</a></div>
+                    <div className='detail_back'><Link to='/'>🡸</Link></div>
                 </div>
                 
                 </>
