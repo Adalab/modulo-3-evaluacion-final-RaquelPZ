@@ -29,15 +29,15 @@ function MagicDetail({ magic }) {
                         {magicInfo.name ? magicInfo.name : "NO name"}
                     </h2>
                     <ul className='.detail_list'>
-                        <li><strong>House: </strong>{magicInfo.house ? magicInfo.house : "NO house"}</li>
-                        <li><strong>Specie: </strong>{magicInfo.species ? magicInfo.species : "NO specie"}</li>
-                        <li><strong>Gender: </strong>{magicInfo.gender ? magicInfo.gender : "NO gender"}</li>
-                        <li><strong>Birth: </strong>{magicInfo.yearOfBirth ? magicInfo.yearOfBirth : "¿?"}</li>
+                        <li><strong>House: </strong>{magicInfo.house ? magicInfo.house : "ø"}</li>
+                        <li><strong>Specie: </strong>{magicInfo.species ? magicInfo.species : "ø"}</li>
+                        <li><strong>Gender: </strong>{magicInfo.gender ? magicInfo.gender : "ø"}</li>
+                        <li><strong>Birth: </strong>{magicInfo.yearOfBirth ? magicInfo.yearOfBirth : "ø?"}</li>
                     </ul>
                     <ul className='.detail_more'>
-                        <li><strong>Blood: </strong>{magicInfo.ancestry ? magicInfo.ancestry : "A stranger"}</li>
-                        <li><strong>Status: </strong>{magicInfo.status ? magicInfo.ancestry : "A stranger"}</li>
-                        <li><strong>Patronus: </strong>{magicInfo.patronus ? magicInfo.patronus : "A stranger"}</li>
+                        <li><strong>Alive: </strong>{magicInfo.alive ? "♡" : "✚"}</li>
+                        <li><strong>Blood: </strong>{magicInfo.ancestry ? magicInfo.ancestry : "Unrevealed"}</li>  
+                        <li><strong>Patronus: </strong>{magicInfo.patronus ? magicInfo.patronus : "Secret"}</li>
                     </ul>
                     <div className='detail_back'><Link to='/'>🡸</Link></div>
                 </div>

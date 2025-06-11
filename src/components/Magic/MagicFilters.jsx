@@ -22,10 +22,10 @@ function MagicFilters({ filters, handleFilterName, handleFilterHouse, handleFilt
                         onInput={handleFilterHouse}
                     >
                         <option value="">HOUSES</option>
-                        <option value="Gryffindor">Gryffindor</option>
-                        <option value="Ravenclaw">Ravenclaw</option>
-                        <option value="Slytherin">Slytherin</option>
-                        <option value="Hufflepuff">Hufflepuff</option>
+                        <option className="option_icon" value="Gryffindor">🦁</option>
+                        <option className="option_icon" value="Ravenclaw">🦅</option>
+                        <option className="option_icon" value="Slytherin">🐍</option>
+                        <option className="option_icon" value="Hufflepuff">🦡</option>
                     </select>
 
                     <select
