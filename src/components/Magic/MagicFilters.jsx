@@ -36,10 +36,9 @@ function MagicFilters({ filters, handleFilterName, handleFilterHouse, handleFilt
                         onInput={handleFilterBlood}
                     >
                         <option value="">BLOOD</option>
-                        <option value="pure-blood">Limpia</option>
+                        <option value="pure-blood">Mudblood</option>
                         <option value="half-blood">Mestiza</option>
                         <option value="muggleborn">Pureblood</option>
-                        <option value="others">Others</option>
                     </select>
                 </div>
             </form>
