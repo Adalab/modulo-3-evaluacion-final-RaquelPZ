@@ -22,7 +22,10 @@ function App() {
     fetch('https://hp-api.onrender.com/api/characters')
       .then(response => response.json())
       .then(data => {
-        setMagic(data);
+        const abcData = [...data].sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+        setMagic(abcData);
       });
   }, []);
 
